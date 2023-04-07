@@ -14,8 +14,8 @@ import requests
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 db=Bootstrap(app)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///movies-prime-halifax-final.db'
+app.app_context().push()
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///movies-prime-halifax-finawel.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
